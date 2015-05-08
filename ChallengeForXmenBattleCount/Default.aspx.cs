@@ -21,7 +21,18 @@ namespace ChallengeForXmenBattleCount
 
 
             // Your Code Here!
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == numbers.Max())
+                {
+                    result += String.Format("Most battles belong to: {0} (Value: {1})<br/>", names[i], numbers[i]);
+                }
 
+                if(numbers[i] == numbers.Min())
+                {
+                    result += String.Format("Least battles belong to: {0} (Value: {1})", names[i], numbers[i]);
+                }
+            }
 
             resultLabel.Text = result;
         }
